@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  /*(paragraphs)*/
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  /*(background, headings, buttons)*/
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: Lexend Deca, sans-serif;
+  background-color: var(--Very-light-gray);
+}
+
+h1 {
+  font-family: Big Shoulders Display, sans-serif;
+  text-transform: uppercase;
+  font-size: 3em;
+  margin: 20px 0 20px 0;
+}
+
+p {
+  line-height: 2em;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1em;
+  background-color: white;
+  padding: 15px 40px 15px 40px;
+  margin-top: 20px;
+  border-radius: 5em;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  color: var(--Transparent-white);
+}
+
+.container .card {
+  min-height: 500px;
+  padding: 30px;
+}
+
+.container #sedans {
+  background-color: var(--Bright-orange);
+  border-radius: 10px 10px 0 0;
+}
+
+.container #sedans button {
+  color: var(--Bright-orange);
+}
+
+.container #suv {
+  background-color: var(--Dark-cyan);
+}
+
+.container #suv button {
+  color: var(--Dark-cyan);
+}
+
+.container #luxury {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0 0 10px 10px;
+}
+
+.container #luxury button {
+  color: var(--Very-dark-cyan);
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    max-width: 1080px;
+  }
+
+  .container .card {
+    padding: 50px;
+  }
+
+  .container #sedans {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .container #luxury {
+    border-radius: 0 10px 10px 0;
+  }
+
+  button {
+    margin-top: 100px;
+  }
+}
+
+@media (min-width: 990px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
